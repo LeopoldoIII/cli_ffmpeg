@@ -1,6 +1,17 @@
 # cli_ffmpeg
 a bunch of ffmpeg commands
 
+# installation 
+
+## Mac 
+
+`brew install ffmpeg`
+
+## Windows 
+
+
+## Linux 
+
 
 mov to mp4 
 
