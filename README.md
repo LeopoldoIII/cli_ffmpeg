@@ -37,3 +37,16 @@ Resize an Image to 3000x3000 Pixels with High-Quality Scaling Using
     ffmpeg -i input.jpg -vf "scale=3000:3000:flags=lanczos" output.jpg
 
   
+
+HEIC to jpg
+    
+    brew install libheif imagemagick
+
+Same resolution (almost same resolution)
+
+    magick input.heic -strip -quality 85 output.jpg
+
+Ensure file is < 1 MB (no cropping)
+
+    magick input.heic -strip -sampling-factor 4:2:0 -interlace Plane \
+      -quality 85 -define jpeg:extent=1000kb output.jpg
